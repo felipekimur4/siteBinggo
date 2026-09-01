@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Binggo Bebidas — bebidas para todos os momentos.">
+  <meta name="theme-color" content="#111111">
+  <title>Binggo Bebidas | Sabor que marca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="topo">
+    <div class="container nav">
+      <a class="logo" href="#topo" aria-label="Binggo Bebidas">
+        <span class="logo-mark">B</span>
+        <span>Binggo<span class="logo-sub">BEBIDAS</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">A Binggo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="nav-cta" href="#contato">Fale conosco</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">BINGGO BEBIDAS</span>
+          <h1>Seu momento.<br><em>Seu sabor.</em><br>Sua Binggo.</h1>
+          <p>
+            Bebidas pensadas para transformar encontros, festas e momentos
+            especiais em experiências que ficam na memória.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">Conheça nossos produtos <span>→</span></a>
+            <a class="btn btn-ghost" href="#sobre">Conheça a Binggo</a>
+          </div>
+        </div>
+
+        <div class="hero-product" aria-label="Destaque da Binggo">
+          <div class="bottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-body">
+              <div class="bottle-label">
+                <strong>BINGGO</strong>
+                <small>BEBIDAS</small>
+                <span>SABOR QUE MARCA</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-orbit orbit-1"></div>
+          <div class="hero-orbit orbit-2"></div>
+          <span class="floating-word">BINGGO</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="products section" id="produtos">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">NOSSA LINHA</span>
+            <h2>Feita para <em>cada momento.</em></h2>
+          </div>
+          <p>Uma identidade forte, sabores marcantes e produtos para diferentes ocasiões.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-number">01</div>
+            <div class="product-art cocktail-art"><span>B</span></div>
+            <div class="product-info">
+              <span>LINHA</span>
+              <h3>Drinks & Cocktails</h3>
+              <p>Opções práticas e saborosas para curtir sem complicação.</p>
+              <a href="#contato">Saiba mais →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-number">02</div>
+            <div class="product-art energy-art"><span>B</span></div>
+            <div class="product-info">
+              <span>LINHA</span>
+              <h3>Energéticos</h3>
+              <p>Mais energia para acompanhar o ritmo dos seus melhores momentos.</p>
+              <a href="#contato">Saiba mais →</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-number">03</div>
+            <div class="product-art bottle-art"><span>B</span></div>
+            <div class="product-info">
+              <span>LINHA</span>
+              <h3>Bebidas</h3>
+              <p>Uma seleção de produtos desenvolvidos para surpreender.</p>
+              <a href="#contato">Saiba mais →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <span class="about-big">B</span>
+          <div class="about-stamp">BINGGO<br><small>BEBIDAS</small></div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">SOBRE A BINGGO</span>
+          <h2>Uma marca feita para <em>marcar.</em></h2>
+          <p>
+            A Binggo nasce com uma proposta simples: criar bebidas com
+            personalidade, qualidade e uma identidade que chama atenção.
+          </p>
+          <p>
+            Nosso objetivo é levar mais sabor para os momentos que realmente
+            importam — do encontro entre amigos àquela comemoração especial.
+          </p>
+          <div class="stats">
+            <div><strong>01</strong><span>Identidade</span></div>
+            <div><strong>02</strong><span>Sabor</span></div>
+            <div><strong>03</strong><span>Experiência</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato">
+      <div class="container contact-box">
+        <div>
+          <span class="eyebrow">VAMOS CONVERSAR?</span>
+          <h2>Quer levar a <em>Binggo</em> para o seu negócio?</h2>
+          <p>Entre em contato com a nossa equipe e conheça nossas opções.</p>
+        </div>
+        <div class="contact-actions">
+          <!-- Troque o # pelo seu link do WhatsApp quando tiver o número -->
+          <a class="btn btn-primary" href="#" onclick="return showWhatsAppMessage()">Falar pelo WhatsApp ↗</a>
+          <a class="btn btn-outline" href="mailto:contato@binggobebidas.com.br">Enviar e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#topo">
+        <span class="logo-mark">B</span>
+        <span>Binggo<span class="logo-sub">BEBIDAS</span></span>
+      </a>
+      <p>© <span id="year"></span> Binggo Bebidas. Todos os direitos reservados.</p>
+      <a href="#topo" class="back-top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
