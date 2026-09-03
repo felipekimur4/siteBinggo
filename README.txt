@@ -1,25 +1,20 @@
-# Binggo Bebidas — site
+MODELO DO SITE BINGGO
 
-Estrutura:
-- index.html
-- style.css
-- script.js
+Coloque suas fotos em assets/ com estes nomes:
+logo-binggo.png
+hero-produto.png
+produto-maca-verde.png
+produto-limao.png
+produto-canela.png
+produto-sem-acucar.png
+produto-adocicada.png
 
-## Publicar no Cloudflare Pages pelo GitHub
+As imagens ainda não existem? Sem problema: o site mostra placeholders até você adicioná-las.
 
-1. Crie um repositório novo no GitHub, por exemplo `binggo-site`.
-2. Envie os três arquivos para a raiz do repositório.
-3. No Cloudflare: Workers & Pages → Create application → Pages → Import existing Git repository.
-4. Se for solicitado um framework, escolha "None".
-5. Build command: deixe vazio.
-6. Output directory: deixe vazio ou use `/`.
-7. Publique.
-8. Depois, em Domains/Custom domains do novo projeto, adicione:
-   `binggobebidas.com.br`
-   `www.binggobebidas.com.br`
+Para trocar o WhatsApp:
+abra script.js e troque 5500000000000 pelo número comercial, somente números.
 
-## Antes de publicar
-- Trocar o link do WhatsApp no `index.html`.
-- Trocar o e-mail se necessário.
-- Substituir os elementos visuais de demonstração pelos produtos/fotos reais.
-- Ajustar textos e produtos conforme a linha comercial da Binggo.
+Depois no terminal:
+git add .
+git commit -m "Atualiza modelo do site Binggo"
+git push

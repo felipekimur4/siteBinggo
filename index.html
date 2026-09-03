@@ -1,42 +1,545 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Binggo Bebidas">
-<title>Binggo Bebidas</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Binggo Bebidas | Sabor que marca</title>
+
+    <meta
+        name="description"
+        content="Binggo Bebidas - Coquetéis alcoólicos e bebidas para todos os momentos."
+    >
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header><div class="nav">
-<a class="logo" href="#inicio"><b>B</b><span>BINGGO<small>BEBIDAS</small></span></a>
-<button class="toggle">☰</button>
-<nav><a href="#inicio">Início</a><a href="#marca">A marca</a><a href="#linha">Nossa linha</a><a href="#contato">Contato</a></nav>
-<a class="topbtn" href="#contato">Fale conosco</a>
-</div></header>
 
-<main>
-<section class="hero" id="inicio"><div class="frame"></div><div class="hero-inner"><div>
-<p class="eyebrow">BINGGO BEBIDAS</p>
-<h1>Uma marca<br>que <i>marca</i><br>o momento.</h1>
-<p class="lead">Bebidas com personalidade, presença e sabor para transformar qualquer encontro em uma boa história.</p>
-<div class="actions"><a class="btn gold" href="#linha">Conheça a linha →</a><a class="btn text" href="#marca">Conheça a Binggo</a></div>
-</div><div class="symbol"><div class="star">✦</div><div class="bigb">B</div><div class="seal">BINGGO<br><small>BEBIDAS</small></div><span class="r r1"></span><span class="r r2"></span></div></div><div class="scroll">ROLE PARA BAIXO ↓</div></section>
+    <!-- =========================
+         AVISO 18+
+    ========================== -->
 
-<section class="intro" id="marca"><div class="wrap two"><div><p class="eyebrow dark">A BINGGO</p><h2>Presença forte.<br><i>Identidade própria.</i></h2></div><div class="copy"><p>A Binggo é uma marca de bebidas criada para ter personalidade. Nossa identidade combina preto, dourado, creme e bordô em uma linguagem sofisticada e marcante.</p><p>Cada detalhe foi pensado para transmitir uma marca forte, moderna e pronta para crescer.</p></div></div></section>
+    <div class="age-warning">
+        <div class="age-box">
+            <span class="age-icon">18+</span>
 
-<section class="line" id="linha"><div class="wrap"><div class="head"><div><p class="eyebrow">NOSSA LINHA</p><h2>Produtos para<br><i>cada ocasião.</i></h2></div><p>Conheça nossas categorias.</p></div><div class="cards">
-<article class="card"><span>01</span><strong>B</strong><div><small>BINGGO</small><h3>Bebida Alcoólica Mista</h3><a href="#contato">Conhecer produto →</a></div></article>
-<article class="card burg"><span>02</span><strong>B</strong><div><small>BINGGO</small><h3>Novos sabores</h3><a href="#contato">Em breve →</a></div></article>
-<article class="card creme"><span>03</span><strong>+</strong><div><small>BINGGO</small><h3>Novidades da marca</h3><a href="#contato">Fale conosco →</a></div></article>
-</div></div></section>
+            <div>
+                <strong>Este site é destinado a maiores de 18 anos.</strong>
+                <p>
+                    Aprecie com responsabilidade. Venda e consumo de bebidas
+                    alcoólicas são proibidos para menores de 18 anos.
+                </p>
+            </div>
 
-<section class="highlight"><div><p class="eyebrow">BINGGO</p><h2>Não é só bebida.<br><i>É identidade.</i></h2><hr><p>Uma experiência visual e uma marca que você reconhece de longe.</p></div></section>
+            <button id="closeWarning">ENTENDI</button>
+        </div>
+    </div>
 
-<section class="contact" id="contato"><div class="wrap contact-inner"><div><p class="eyebrow dark">CONTATO</p><h2>Vamos fazer a<br><i>Binggo acontecer.</i></h2><p>Para distribuidores, parceiros, pontos de venda e informações sobre nossos produtos.</p></div><div class="actions"><a class="btn black" href="#" onclick="return whatsapp()">WhatsApp ↗</a><a class="btn outline" href="mailto:contato@binggobebidas.com.br">E-mail ↗</a></div></div></section>
-</main>
 
-<footer><div class="wrap foot"><a class="logo" href="#inicio"><b>B</b><span>BINGGO<small>BEBIDAS</small></span></a><p>© <span id="year"></span> Binggo Bebidas.</p><a href="#inicio">Voltar ao topo ↑</a></div></footer>
-<script src="script.js"></script>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo">
+                <img src="assets/logo-binggo.png" alt="Binggo Bebidas">
+            </a>
+
+            <nav class="nav" id="nav">
+
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#contato">Contato</a>
+
+            </nav>
+
+            <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="hero-label">
+                        BINGGO BEBIDAS
+                    </span>
+
+                    <h1>
+                        Sabor que
+                        <span>marca.</span>
+                    </h1>
+
+                    <p>
+                        Bebidas feitas para transformar qualquer momento
+                        em uma experiência ainda melhor.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#produtos" class="btn btn-primary">
+                            CONHEÇA NOSSOS PRODUTOS
+                        </a>
+
+                        <a href="#contato" class="btn btn-outline">
+                            FALE CONOSCO
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUTOS
+        ========================== -->
+
+        <section class="products-section" id="produtos">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        NOSSO PORTFÓLIO
+                    </span>
+
+                    <h2>
+                        Conheça nossos
+                        <span>produtos</span>
+                    </h2>
+
+                    <p>
+                        Sabores marcantes para diferentes momentos.
+                    </p>
+
+                </div>
+
+
+                <div class="products-grid">
+
+
+                    <!-- PRODUTO 1 -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/canela.png"
+                                alt="Binggo Canela"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                COQUETEL ALCOÓLICO
+                            </span>
+
+                            <h3>Canela</h3>
+
+                            <p>
+                                Um sabor marcante e aromático,
+                                perfeito para quem gosta de personalidade.
+                            </p>
+
+                            <div class="product-details">
+                                <span>14% VOL.</span>
+                                <span>500 ML</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 2 -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/limao.png"
+                                alt="Binggo Limão"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                COQUETEL ALCOÓLICO
+                            </span>
+
+                            <h3>Limão</h3>
+
+                            <p>
+                                Refrescante, cítrico e perfeito
+                                para quem busca um sabor intenso.
+                            </p>
+
+                            <div class="product-details">
+                                <span>14% VOL.</span>
+                                <span>500 ML</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 3 -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/maca-verde.png"
+                                alt="Binggo Maçã Verde"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                COQUETEL ALCOÓLICO
+                            </span>
+
+                            <h3>Maçã Verde</h3>
+
+                            <p>
+                                O equilíbrio entre o doce e o
+                                refrescante em um sabor marcante.
+                            </p>
+
+                            <div class="product-details">
+                                <span>14% VOL.</span>
+                                <span>500 ML</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 4 -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/binggo-2l.png"
+                                alt="Binggo 2 litros"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                BEBIDA ALCOÓLICA MISTA
+                            </span>
+
+                            <h3>Binggo 2L</h3>
+
+                            <p>
+                                Uma opção para compartilhar,
+                                com muito sabor e personalidade.
+                            </p>
+
+                            <div class="product-details">
+                                <span>18% VOL.</span>
+                                <span>2 LITROS</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUTO 5 -->
+
+                    <article class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="assets/sem-acucar.png"
+                                alt="Binggo Sem Açúcar"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                LINHA ESPECIAL
+                            </span>
+
+                            <h3>Sem Açúcar</h3>
+
+                            <p>
+                                A mesma personalidade Binggo,
+                                em uma opção sem açúcar.
+                            </p>
+
+                            <div class="product-details">
+                                <span>500 ML</span>
+                                <span>LINHA ESPECIAL</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+
+        <section class="about-section" id="sobre">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+
+                    <img
+                        src="assets/foto-binggo.png"
+                        alt="Produtos Binggo"
+                    >
+
+                </div>
+
+                <div class="about-text">
+
+                    <span class="section-tag">
+                        SOBRE O BINGGO
+                    </span>
+
+                    <h2>
+                        Uma bebida feita
+                        para <span>marcar momentos.</span>
+                    </h2>
+
+                    <p>
+                        O Binggo nasceu com o propósito de criar bebidas
+                        saborosas, marcantes e acessíveis para quem gosta
+                        de aproveitar bons momentos.
+                    </p>
+
+                    <p>
+                        Nossa linha combina diferentes sabores e
+                        possibilidades, sempre buscando entregar
+                        qualidade e personalidade em cada garrafa.
+                    </p>
+
+                    <a href="#contato" class="btn btn-primary">
+                        FALE COM O BINGGO
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DESTAQUE
+        ========================== -->
+
+        <section class="highlight-section">
+
+            <div class="container highlight-content">
+
+                <span>
+                    BINGGO BEBIDAS
+                </span>
+
+                <h2>
+                    Seu momento.
+                    <strong>Seu sabor.</strong>
+                </h2>
+
+                <p>
+                    Escolha seu sabor e aproveite com responsabilidade.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTATO
+        ========================== -->
+
+        <section class="contact-section" id="contato">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">
+                        ENTRE EM CONTATO
+                    </span>
+
+                    <h2>
+                        Vamos <span>conversar?</span>
+                    </h2>
+
+                    <p>
+                        Entre em contato com o Binggo Bebidas.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <h3>E-mail</h3>
+
+                        <p>
+                            contato@binggobebidas.com.br
+                        </p>
+
+                        <a
+                            href="mailto:contato@binggobebidas.com.br"
+                            class="contact-link"
+                        >
+                            ENVIAR E-MAIL
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+                        <h3>WhatsApp</h3>
+
+                        <p>
+                            Fale diretamente com nossa equipe.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="contact-link"
+                            id="whatsappButton"
+                        >
+                            FALAR NO WHATSAPP
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-logo">
+
+                <img
+                    src="assets/logo-binggo.png"
+                    alt="Binggo Bebidas"
+                >
+
+                <p>
+                    Sabor que marca.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#inicio">Início</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#contato">Contato</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Binggo Bebidas. Todos os direitos reservados.
+            </p>
+
+            <p>
+                Venda proibida para menores de 18 anos.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
