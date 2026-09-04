@@ -76,14 +76,7 @@ if (whatsappButton) {
 
         event.preventDefault();
 
-        /*
-            TROQUE PELO WHATSAPP DA BINGGO.
-
-            Exemplo:
-
-            const phone = "5541999999999";
-        */
-
+   
         const phone = "554933531444";
 
         const message =
