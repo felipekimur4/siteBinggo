@@ -16,6 +16,12 @@
     <link rel="icon" type="image/jpeg" href="assets/favicon.png">
 </head>
 
+<script>
+    if (localStorage.getItem("binggoAgeConfirmed") === "true") {
+        document.write('<style>.age-warning { display: none !important; }</style>');
+    }
+</script>
+
 <body>
 
     <!-- =========================
@@ -150,10 +156,12 @@
 
                         <div class="product-image">
 
-                            <img
-                                src="assets/canela.png"
-                                alt="Binggo Canela"
-                            >
+                          <img
+                              src="assets/binggoCanela.png"
+                              alt="Binggo Canela"
+                              class="product-bottle canela"
+                            />
+
 
                         </div>
 
@@ -171,8 +179,8 @@
                             </p>
 
                             <div class="product-details">
-                                <span>14% VOL.</span>
-                                <span>500 ML</span>
+                                <span>12,5% VOL.</span>
+                                <span>450 ML</span>
                             </div>
 
                         </div>
@@ -187,9 +195,10 @@
                         <div class="product-image">
 
                             <img
-                                src="assets/limao.png"
-                                alt="Binggo Limão"
-                            >
+                                  src="assets/binggoLimao.png"
+                                 alt="Binggo Limão"
+                                class="product-bottle limao"
+                            />
 
                         </div>
 
@@ -207,8 +216,8 @@
                             </p>
 
                             <div class="product-details">
-                                <span>14% VOL.</span>
-                                <span>500 ML</span>
+                                <span>12,5% VOL.</span>
+                                <span>450 ML</span>
                             </div>
 
                         </div>
@@ -223,7 +232,7 @@
                         <div class="product-image">
 
                             <img
-                                src="assets/maca-verde.png"
+                                src="assets/binggoMacaVerde.png"
                                 alt="Binggo Maçã Verde"
                             >
 
@@ -243,8 +252,8 @@
                             </p>
 
                             <div class="product-details">
-                                <span>14% VOL.</span>
-                                <span>500 ML</span>
+                                <span>12,5% VOL.</span>
+                                <span>450 ML</span>
                             </div>
 
                         </div>
@@ -259,7 +268,7 @@
                         <div class="product-image">
 
                             <img
-                                src="assets/binggo-2l.png"
+                                src="assets/binggoCom.png"
                                 alt="Binggo 2 litros"
                             >
 
@@ -268,10 +277,10 @@
                         <div class="product-info">
 
                             <span class="product-category">
-                                BEBIDA ALCOÓLICA MISTA
-                            </span>
+                                PARA COMPARTILHAR
+                                </span>
 
-                            <h3>Binggo 2L</h3>
+                            <h3>Binggo Adocicado</h3>
 
                             <p>
                                 Uma opção para compartilhar,
@@ -279,7 +288,7 @@
                             </p>
 
                             <div class="product-details">
-                                <span>18% VOL.</span>
+                                <span>10% VOL.</span>
                                 <span>2 LITROS</span>
                             </div>
 
@@ -295,7 +304,7 @@
                         <div class="product-image">
 
                             <img
-                                src="assets/sem-acucar.png"
+                                src="assets/binggoSem.png"
                                 alt="Binggo Sem Açúcar"
                             >
 
@@ -304,10 +313,10 @@
                         <div class="product-info">
 
                             <span class="product-category">
-                                LINHA ESPECIAL
+                                LINHA SEM AÇÚCAR
                             </span>
 
-                            <h3>Sem Açúcar</h3>
+                            <h3>Binggo Sem Açúcar</h3>
 
                             <p>
                                 A mesma personalidade Binggo,
@@ -315,8 +324,8 @@
                             </p>
 
                             <div class="product-details">
-                                <span>500 ML</span>
-                                <span>LINHA ESPECIAL</span>
+                                <span>10% VOL.</span>
+                                <span>2 LITROS</span>
                             </div>
 
                         </div>
@@ -342,7 +351,7 @@
                 <div class="about-image">
 
                     <img
-                        src="assets/foto-binggo.png"
+                        src="assets/binggoSobre.png"
                         alt="Produtos Binggo"
                     >
 
@@ -469,11 +478,10 @@
                             Fale diretamente com nossa equipe.
                         </p>
 
-                        <a
-                            href="#"
-                            class="contact-link"
-                            id="whatsappButton"
-                        >
+                       <a href="https://wa.me/554933531444?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Binggo%20Bebidas." 
+                            class="contact-link" 
+                            target="_blank" 
+                            rel="noopener noreferrer">
                             FALAR NO WHATSAPP
                         </a>
 
@@ -525,9 +533,7 @@
 
         <div class="footer-bottom">
 
-            <p>
-                © 2026 Binggo Bebidas. Todos os direitos reservados.
-            </p>
+           <p>© <span id="anoAtual">2026</span> Binggo Bebidas. Todos os direitos reservados.</p>
 
             <p>
                 Venda proibida para menores de 18 anos.

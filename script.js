@@ -98,11 +98,8 @@ if (whatsappButton) {
 
 const currentYear = new Date().getFullYear();
 
-const footerYear = document.querySelector(".footer-bottom p");
+const footerYearSpan = document.getElementById("anoAtual");
 
-if (footerYear) {
-
-    footerYear.innerHTML =
-        `© ${currentYear} Binggo Bebidas. Todos os direitos reservados.`;
-
+if (footerYearSpan) {
+    footerYearSpan.textContent = currentYear;
 }
