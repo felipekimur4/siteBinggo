@@ -237,8 +237,10 @@ button {
 }
 
 .hero-text {
-    max-width: 600px;
-    text-align: left;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 270px;
+    margin-bottom: 22px;
 }
 
 .hero-label,
@@ -250,12 +252,10 @@ button {
 }
 
 .hero h1 {
-    font-size: clamp(55px, 6vw, 82px);
+    font-size: 42px;
     line-height: 0.95;
-    margin: 25px 0;
-    text-transform: uppercase;
-    letter-spacing: -3px;
-    max-width: 600px;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
 }
 
 .hero h1 span {
@@ -269,10 +269,9 @@ button {
     margin-bottom: 35px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+.hero-buttons a {
+    font-size: 10px;
+    padding: 12px 18px;
 }
 
 
@@ -393,23 +392,119 @@ button {
     border-top-color: rgba(201, 154, 61, 0.30);
 }
 
+/* =========================================
+   IMAGEM DOS PRODUTOS
+========================================= */
+
 .product-image {
     height: 390px;
-    background:
-        radial-gradient(
-            ellipse at center 45%,
-            rgba(201, 154, 61, 0.32) 0%,
-            rgba(201, 154, 61, 0.16) 25%,
-            rgba(201, 154, 61, 0.07) 45%,
-            rgba(201, 154, 61, 0.02) 62%,
-            transparent 75%
-        ),
-        #0d0d0d;
-
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    overflow: hidden;
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 48%,
+            rgba(201, 154, 61, 0.15) 0%,
+            rgba(201, 154, 61, 0.05) 32%,
+            transparent 62%
+        ),
+        #080706;
+
+    border: none;
+}
+
+/* Brilho circular atrás da garrafa */
+.product-image::before {
+    content: "";
+    position: absolute;
+    width: 285px;
+    height: 285px;
+
+    left: 50%;
+    top: 47%;
+
+    transform: translate(-50%, -50%);
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(201, 154, 61, 0.10),
+            transparent 68%
+        );
+
+    box-shadow:
+        0 0 35px rgba(201, 154, 61, 0.05);
+}
+
+/* Iluminação suave no chão */
+.product-image::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 30px;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    background: rgba(201, 154, 61, 0.16);
+
+    filter: blur(22px);
+
+    border-radius: 50%;
+}
+
+/* Garrafa */
+.product-image img {
+    position: relative;
+    z-index: 2;
+
+    width: auto;
+    height: 325px;
+    max-width: 78%;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 15px 14px rgba(0, 0, 0, 0.65));
+}
+
+/* Ajuste individual */
+.product-image img.canela {
+    height: 335px;
+}
+
+.product-image img.limao {
+    height: 325px;
+}
+
+.illustrative {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+
+    color: rgba(224, 183, 90, 0.75);
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    padding: 5px 8px;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    z-index: 5;
 }
 
 .product-image img {
@@ -681,19 +776,108 @@ button {
 
 }
 
+.hero-title-mobile,
+.hero-text-mobile {
+    display: none;
+}
 
+.hero-title-mobile {
+    font-size: 42px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+}
+
+.hero-text-mobile {
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 270px;
+}
 /* =========================
    RESPONSIVO - CELULAR
 ========================= */
 
 @media (max-width: 650px) {
 
-    /* =========================
-       HEADER
-    ========================= */
+  .hero {
+    min-height: 620px;
+    height: 620px;
 
-    .header-content {
-        height: 70px;
+    background-image: url("assets/hero-mobile.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+    .hero-label {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.hero-buttons a {
+    width: 145px;
+    min-height: 34px;
+    padding: 8px 10px;
+    font-size: 8px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+    .section-header h2 {
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.85),
+        -1px -1px 2px rgba(0, 0, 0, 0.35);
+}
+
+    .hero-title-desktop,
+    .hero-text-desktop {
+        display: none;
+    }
+
+    .hero-title-mobile,
+    .hero-text-mobile {
+        display: block;
+    }
+
+    .hero-title-mobile {
+    font-size: 42px;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+
+    text-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.9),
+        -1px -1px 2px rgba(0, 0, 0, 0.45),
+        1px -1px 2px rgba(0, 0, 0, 0.45),
+        -1px 1px 2px rgba(0, 0, 0, 0.45);
+}
+    .hero::before {
+        background:
+           linear-gradient(
+               90deg,
+             rgba(0, 0, 0, 0.72) 0%,
+             rgba(0, 0, 0, 0.30) 50%,
+             rgba(0, 0, 0, 0.25) 100%
+            )
+,
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.20) 0%,
+                rgba(0, 0, 0, 0.45) 100%
+            );
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: left;
     }
 
     .logo img {
@@ -702,6 +886,13 @@ button {
 
     .menu-button {
         display: block;
+        background: none;
+        border: none;
+        color: var(--cream);
+        font-size: 26px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 1002;
     }
 
     .nav {
@@ -709,12 +900,14 @@ button {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #0b0b0b;
+
+        background: rgba(11, 11, 11, 0.96);
+        backdrop-filter: blur(10px);
 
         flex-direction: column;
         gap: 0;
 
-        padding: 10px 0;
+        padding: 8px 0;
 
         border-bottom: 1px solid var(--border);
 
@@ -727,29 +920,10 @@ button {
 
     .nav a {
         width: 100%;
-        padding: 16px 5%;
+        padding: 14px 25px;
+        font-size: 13px;
+        text-align: center;
     }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-        min-height: 85vh;
-        padding: 100px 20px 60px;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-        line-height: 1.05;
-    }
-
-    .hero p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
 
     /* =========================
        SEÇÕES
